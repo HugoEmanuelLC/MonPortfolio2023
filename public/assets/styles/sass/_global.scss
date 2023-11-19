@@ -1,0 +1,15 @@
+body{
+    min-height: 100vh;
+    background-color: $color_60;
+}
+
+#page{
+    max-width: 1440px;
+    position: relative;
+    margin: auto;
+}
+
+.container{
+    @include container;
+    padding: 0 20px;
+}
