@@ -3,7 +3,7 @@ let modal = document.querySelector('#modal')
 let body_modal = modal.querySelector('.body_modal')
 
 let btn_modal_about_on = document.querySelector('.btn_modal_about_on')
-let btn_modal_prototype_on = document.querySelector('.btn_modal_prototype_on')
+let btn_modal_prototypes_on = document.querySelector('.btn_modal_prototypes_on')
 let btn_modal_formations_on = document.querySelector('.btn_modal_formations_on')
 let btn_modal_contact_on = document.querySelector('.btn_modal_contact_on')
 let btn_modal_off = document.querySelector('.btn_modal_off')
@@ -20,7 +20,7 @@ const modalOnOff = () => {
 
 // laptop
 btn_modal_about_on.addEventListener('click', modalOnOff)
-btn_modal_prototype_on.addEventListener('click', modalOnOff)
+btn_modal_prototypes_on.addEventListener('click', modalOnOff)
 btn_modal_formations_on.addEventListener('click', modalOnOff)
 btn_modal_contact_on.addEventListener('click', modalOnOff)
 btn_modal_off.addEventListener('click', modalOnOff)

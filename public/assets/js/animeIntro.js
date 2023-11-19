@@ -1,7 +1,5 @@
 
-let intro = document.querySelector('#intro')
-
-const introOnOff = () => {
+export const introOnOff = () => {
     if (intro.matches('.intro_active')) {
         intro.classList.remove('intro_active')
         intro.classList.add('intro_desactive')
@@ -12,7 +10,7 @@ const introOnOff = () => {
 }
 
 
-function animete() {
+export function animete() {
     let intro = document.querySelector('#intro')
     let ul_hide = intro.querySelector('.hide')
     let ul_show = intro.querySelector('.show')
@@ -45,10 +43,12 @@ function animete() {
 
 }
 
-setTimeout(() => {
-    animete()
-}, 500);
+// setTimeout(() => {
+//     animete()
+// }, 500);
 
 
-let btn_intro_off = document.querySelector('.btn_intro_off')
+export let btn_intro_off = document.querySelector('.btn_intro_off')
 btn_intro_off.addEventListener('click', introOnOff)
+
+export let test = "test"

@@ -2,7 +2,7 @@ $duration: 600ms;
 
 #modal{
     grid-column: 1/-1;
-    background-color: red;
+    background-color: $color_60;
     position: absolute;
         top: 0;
         left: 0;
@@ -11,7 +11,7 @@ $duration: 600ms;
 
     .body_modal{
         position: relative;
-        border: solid 3px white;
+        background-color: $color_30;
         height: 100%;
         grid-column: 1/-1;
         border-radius: 10px;
@@ -39,17 +39,21 @@ $duration: 600ms;
 @keyframes modal-on {
     0%{
         border-radius: 0 50% 50% 50%;
+        // opacity: 0;
     }
     100%{
+        // opacity: 1;
         border-radius: 0 0 0 0;
     }
 }
 
 @keyframes modal-off {
     0%{
+        // opacity: 1;
         border-radius: 0 0 0 0;
     }
     100%{
+        // opacity: 0;
         border-radius: 0 50% 50% 50%;
     }
 }

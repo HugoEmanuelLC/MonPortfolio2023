@@ -7,29 +7,26 @@
     <!-- AOS -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
+    <!-- LIBRARY JQUERY -->
+    <script type="text/javascript" src="public/src/jquery/jquery.min.js"></script>
+    <!-- ICONS -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- CSS -->
     <link rel="stylesheet" href="public/assets/styles/style.css">
     <title>Home | Portfolio</title>
 </head>
 
 <body>
-
     <div id="page">
-        <header>
-            <div class="container">
-            </div>
-        </header>
-
         <main>
             <div class="container">
                 <div class="body">
-                    <div class="blocs blocs_animed" data-aos="zoom-out-up" >
+                    <div id="navAnimed" class="blocs blocs_animed ">
                         <!-- <h1>HugoClavinas</h1> -->
                         <div class="bloc bloc_animed">
                             <!-- <span class="footer"></span> -->
                             <div class="link btn_modal_about_on" style="--i:0;">About Me</div>
-                            <div class="link btn_modal_prototype_on" style="--i:1;">Prototypes</div>
+                            <div class="link btn_modal_prototypes_on" style="--i:1;">Prototypes</div>
                             <div class="link btn_modal_formations_on" style="--i:2;">Formations</div>
                             <div class="link btn_modal_contact_on" style="--i:3;">Contact</div>
                             <!-- <div class="link" style="--i:4;">link05</div>
@@ -42,6 +39,9 @@
                             <a class="btn_modal_off">
                                 <i class='bx bx-log-out-circle'></i>
                             </a>
+                            
+                            <div class="bloc">
+                            </div>
                         </div>
                     </div>
 
@@ -58,25 +58,19 @@
 
                         <ul class="show"></ul>
                     </div>
+
+
                 </div>
             </div>
         </main>
-
-        <!-- <footer>
-        <div class="container">
-            <h3>Footer</h3>
-        </div>
-    </footer> -->
     </div>
 
     <script src="./public/assets/js/animeNavbar.js"></script>
     <script src="./public/assets/js/modal.js"></script>
-    <script src="./public/assets/js/animeIntro.js"></script>
+    <script src="main.js" type="module"></script>
+    <!-- ADD COMPONENTS -->
+    <script src="./public/routesComponents/AddComponents.js"></script>
     <script>
-        AOS.init({
-            delay: 1000, // values from 0 to 3000, with step 50ms
-            duration: 1000,
-        });
     </script>
 </body>
 

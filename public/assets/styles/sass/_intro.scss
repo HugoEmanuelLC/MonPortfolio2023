@@ -1,4 +1,5 @@
 #intro{
+    // border: solid 3px red;
     background-color: $color_30;
     overflow: hidden;
     position: fixed;
@@ -9,7 +10,6 @@
     }
 
     ul{
-        // background-color: red;
         position: relative;
         @include Dfx_JCc_AIc;
     }
@@ -18,27 +18,31 @@
         background-color: $color_30;
         position: absolute;
         font-size: 4rem;
-        // border: solid red 2px;
         width: 100vw;
         @include Dfx_JCc_AIc;
-        transition: 1000ms;
     }
 
     .show li{
-        animation-name: li_last;
+        animation-name: li;
         animation-duration: 500ms;
         color: white;
         text-transform: uppercase;
+        transition: 1000ms;
 
         &::before{
             content: "";
             position: absolute;
-            top: 50%;
-            width: 400px;
             height: 2px;
+            width: 400px;
             background-color: red;
-            animation-name: li_last;
-            animation-duration: 500ms;
+            animation-name: li_line;
+            animation-duration: 700ms;
+        }
+    }
+
+    .show li:nth-child(-n + 6){
+        &::before{
+            top: 50%;
         }
     }
 
@@ -48,15 +52,36 @@
 
         &::before{
             background-color: white;
+            bottom: 0;
+            transition: 1000ms;
+        }
+
+        &:hover{
+            font-size: 5rem;
+            transition: 1000ms;
+        }
+        &:hover::before{
+            width: 0;
+            transition: 1000ms;
         }
     }
 
-    @keyframes li_last {
+    @keyframes li {
         0%{
             opacity: 0;
         }
         100%{
             opacity: 1;
+        }
+    }
+    @keyframes li_line {
+        0%{
+            opacity: 0;
+            width: 0;
+        }
+        100%{
+            opacity: 1;
+            width: 400px;
         }
     }
 }
@@ -69,4 +94,6 @@
     height: 0;
     width: 0;
     transition: 600ms;
+    top: 0;
+    z-index: 5;
 }

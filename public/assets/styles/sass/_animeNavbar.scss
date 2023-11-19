@@ -24,7 +24,7 @@ main .body{
     border-radius: 10px;
 }
 
-.blocs{
+#navAnimed{
     background: rgb(2,0,36);
     background: radial-gradient(circle, rgba(2,0,36,1) 8%, rgba(9,9,121,1) 48%, rgba(2,0,36,1) 92%);
     background-size: contain;
@@ -86,6 +86,7 @@ main .body{
             height: $taille_max;
             cursor: pointer;
             position: absolute;
+            z-index: 1000;
             transform: rotateY(calc(90deg * var(--i))) translateZ($tailleEspace_max);
     
             @include Tablets_max{
@@ -95,7 +96,7 @@ main .body{
                 font-size: 14px;
             }
             @extend .Dfx_c;
-            border-radius: 5px 50% 50% 50%;
+            border-radius: 50%;
     
             &:hover{
                 background-color: rgba(255, 255, 255, 0.2);

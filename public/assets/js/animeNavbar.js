@@ -1,5 +1,5 @@
 
-const blocs = document.querySelector('.blocs')
+const blocs = document.getElementById('navAnimed')
 const bloc = blocs.querySelector('.bloc')
 let mouseX = 0
 let mouseY = 0
